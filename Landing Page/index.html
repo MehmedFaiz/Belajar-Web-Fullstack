@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Data Mind — Portofolio mahasiswa ilmu komputer yang berfokus pada eksplorasi data, machine learning, dan arsitektur perangkat lunak berbasis OOP." />
+    <title>The Data Mind | Portofolio Mahasiswa Ilmu Komputer</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- GSAP Core + ScrollTrigger Plugin via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <!-- Script utama — dimuat setelah seluruh DOM siap (defer) -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER & NAVIGASI UTAMA
+    ====================================================== -->
+    <header id="site-header" class="site-header">
+        <nav id="main-nav" class="main-nav" aria-label="Navigasi Utama">
+
+            <div class="nav-brand">
+                <a href="#hero" class="brand-logo" aria-label="The Data Mind - Kembali ke beranda">
+                    <span class="brand-icon" aria-hidden="true">⬡</span>
+                    <span class="brand-name">The Data Mind</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Buka menu navigasi">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <ul id="nav-menu" class="nav-menu" role="list">
+                <li class="nav-item"><a href="#hero"    class="nav-link">Beranda</a></li>
+                <li class="nav-item"><a href="#about"   class="nav-link">Tentang</a></li>
+                <li class="nav-item"><a href="#skills"  class="nav-link">Keahlian</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Proyek</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link nav-link--cta">Kontak</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- =====================================================
+         KONTEN UTAMA
+    ====================================================== -->
+    <main id="main-content">
+
+
+        <!-- -----------------------------------------------
+             SECTION 1: HERO — Perkenalan Diri
+        ------------------------------------------------ -->
+        <section id="hero" class="section section--hero" aria-labelledby="hero-heading">
+
+            <div class="hero-background" aria-hidden="true">
+                <div class="hero-grid-overlay"></div>
+                <div class="hero-particle" data-particle="1"></div>
+                <div class="hero-particle" data-particle="2"></div>
+                <div class="hero-particle" data-particle="3"></div>
+            </div>
+
+            <div class="hero-content container">
+
+                <div class="hero-badge" aria-label="Status">
+                    <span class="badge-dot" aria-hidden="true"></span>
+                    <span class="badge-text">Tersedia untuk kolaborasi &amp; magang</span>
+                </div>
+
+                <h1 id="hero-heading" class="hero-title">
+                    Halo, Saya <br />
+                    <span class="hero-name highlight">Muhammad Faiz</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Mahasiswa <strong>FILKOM</strong> Semester 2, fokus pada
+                    <strong>pengembangan bisnis</strong> dan <strong>analisis data</strong>.
+                </p>
+
+                <div class="hero-tags" aria-label="Bidang minat">
+                    <span class="tag">🐍 Python</span>
+                    <span class="tag">☕ Java</span>
+                    <span class="tag">📊 Data Analysis</span>
+                    <span class="tag">🤖 Machine Learning</span>
+                    <span class="tag">🗄️ SQL</span>
+                    <span class="tag">⚙️ OOP Design</span>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn--primary" id="cta-projects">
+                        Lihat Proyek Saya
+                    </a>
+                    <a href="#contact" class="btn btn--secondary" id="cta-contact">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <div class="hero-stats" aria-label="Statistik singkat">
+                    <div class="stat-item">
+                        <span class="stat-number">12+</span>
+                        <span class="stat-label">Proyek Selesai</span>
+                    </div>
+                    <div class="stat-divider" aria-hidden="true"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Bahasa Pemrograman</span>
+                    </div>
+                    <div class="stat-divider" aria-hidden="true"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Sertifikasi Aktif</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hero-scroll-indicator" aria-hidden="true">
+                <span class="scroll-arrow">↓</span>
+                <span class="scroll-text">Gulir ke bawah</span>
+            </div>
+
+        </section>
+
+
+        <!-- -----------------------------------------------
+             SECTION 2: ABOUT — Tentang Saya
+        ------------------------------------------------ -->
+        <section id="about" class="section section--about" aria-labelledby="about-heading">
+            <div class="container">
+
+                <header class="section-header">
+                    <span class="section-label">Tentang Saya</span>
+                    <h2 id="about-heading" class="section-title">Dari Baris Kode ke Wawasan Data</h2>
+                    <p class="section-description">
+                        Perjalanan saya di dunia komputasi dimulai dari rasa penasaran tentang bagaimana data mentah dapat bercerita.
+                    </p>
+                </header>
+
+                <div class="about-grid">
+
+                    <div class="about-photo-wrapper" aria-label="Foto profil Ahmad Faiz Ramadhani">
+                        <div class="about-photo-placeholder">
+                            <span class="photo-initials" aria-hidden="true">AFR</span>
+                        </div>
+                        <div class="about-photo-badge">
+                            <span>🎓 Semester 5</span>
+                        </div>
+                    </div>
+
+                    <div class="about-text">
+                        <p class="about-paragraph">
+                            Saya adalah mahasiswa <strong>S1 Ilmu Komputer</strong> di Universitas Teknologi Nusantara dengan IPK <strong>3.82</strong>.
+                            Minat utama saya mencakup <em>data science</em>, <em>analisis statistik</em>, dan pengembangan sistem berorientasi objek yang bersih dan terukur.
+                        </p>
+                        <p class="about-paragraph">
+                            Di luar kuliah, saya aktif mengikuti kompetisi data di Kaggle, menjadi asisten lab praktikum Algoritma &amp; Pemrograman,
+                            serta menulis artikel teknis di blog pribadi saya tentang konsep fundamental machine learning.
+                        </p>
+
+                        <dl class="about-details" aria-label="Detail pribadi">
+                            <div class="detail-row">
+                                <dt class="detail-label">Universitas</dt>
+                                <dd class="detail-value">Universitas Teknologi Nusantara</dd>
+                            </div>
+                            <div class="detail-row">
+                                <dt class="detail-label">Program Studi</dt>
+                                <dd class="detail-value">S1 Ilmu Komputer</dd>
+                            </div>
+                            <div class="detail-row">
+                                <dt class="detail-label">IPK</dt>
+                                <dd class="detail-value">3.82 / 4.00</dd>
+                            </div>
+                            <div class="detail-row">
+                                <dt class="detail-label">Lokasi</dt>
+                                <dd class="detail-value">Jakarta, Indonesia</dd>
+                            </div>
+                        </dl>
+
+                        <a href="#" class="btn btn--outline" id="btn-download-cv" download aria-label="Unduh CV Ahmad Faiz dalam format PDF">
+                            📄 Unduh CV (PDF)
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- -----------------------------------------------
+             SECTION 3: SKILLS — Keahlian Teknis
+        ------------------------------------------------ -->
+        <section id="skills" class="section section--skills" aria-labelledby="skills-heading">
+            <div class="container">
+
+                <header class="section-header">
+                    <span class="section-label">Keahlian</span>
+                    <h2 id="skills-heading" class="section-title">Stack Teknologi &amp; Tools</h2>
+                    <p class="section-description">
+                        Kumpulan teknologi yang saya gunakan untuk membangun dan menganalisis.
+                    </p>
+                </header>
+
+                <div class="skills-categories">
+
+                    <article class="skill-category-card" aria-labelledby="skill-cat-data">
+                        <h3 id="skill-cat-data" class="skill-category-title">
+                            <span class="skill-category-icon" aria-hidden="true">📊</span>
+                            Data Science &amp; Analisis
+                        </h3>
+                        <ul class="skill-list" role="list">
+                            <li class="skill-item">
+                                <span class="skill-name">Python (pandas, NumPy)</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Kemahiran Python 90%">
+                                    <div class="skill-bar-fill" style="--skill-level: 90%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">Scikit-learn</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Kemahiran Scikit-learn 75%">
+                                    <div class="skill-bar-fill" style="--skill-level: 75%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">Matplotlib / Seaborn</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Kemahiran Matplotlib 80%">
+                                    <div class="skill-bar-fill" style="--skill-level: 80%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">SQL (PostgreSQL)</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Kemahiran SQL 70%">
+                                    <div class="skill-bar-fill" style="--skill-level: 70%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-category-card" aria-labelledby="skill-cat-oop">
+                        <h3 id="skill-cat-oop" class="skill-category-title">
+                            <span class="skill-category-icon" aria-hidden="true">☕</span>
+                            OOP &amp; Rekayasa Perangkat Lunak
+                        </h3>
+                        <ul class="skill-list" role="list">
+                            <li class="skill-item">
+                                <span class="skill-name">Java (Core OOP)</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Kemahiran Java 85%">
+                                    <div class="skill-bar-fill" style="--skill-level: 85%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">Design Patterns (MVC, Singleton)</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Kemahiran Design Patterns 65%">
+                                    <div class="skill-bar-fill" style="--skill-level: 65%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">UML &amp; Pemodelan Sistem</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Kemahiran UML 70%">
+                                    <div class="skill-bar-fill" style="--skill-level: 70%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span class="skill-name">Git &amp; GitHub</span>
+                                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Kemahiran Git 80%">
+                                    <div class="skill-bar-fill" style="--skill-level: 80%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-category-card" aria-labelledby="skill-cat-tools">
+                        <h3 id="skill-cat-tools" class="skill-category-title">
+                            <span class="skill-category-icon" aria-hidden="true">🛠️</span>
+                            Tools &amp; Environment
+                        </h3>
+                        <ul class="skill-tag-list" role="list">
+                            <li class="skill-tag">Jupyter Notebook</li>
+                            <li class="skill-tag">VS Code</li>
+                            <li class="skill-tag">IntelliJ IDEA</li>
+                            <li class="skill-tag">Google Colab</li>
+                            <li class="skill-tag">Tableau</li>
+                            <li class="skill-tag">MySQL Workbench</li>
+                            <li class="skill-tag">Postman</li>
+                            <li class="skill-tag">Linux (Ubuntu)</li>
+                        </ul>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- -----------------------------------------------
+             SECTION 4: PROJECTS — Grid Proyek
+        ------------------------------------------------ -->
+        <section id="projects" class="section section--projects" aria-labelledby="projects-heading">
+            <div class="container">
+
+                <header class="section-header">
+                    <span class="section-label">Portofolio</span>
+                    <h2 id="projects-heading" class="section-title">Proyek yang Telah Dibuat</h2>
+                    <p class="section-description">
+                        Kumpulan proyek akademik dan personal yang mencerminkan perjalanan belajar saya di bidang data dan rekayasa perangkat lunak.
+                    </p>
+                </header>
+
+                <!-- Filter Kategori Proyek -->
+                <div class="project-filters" role="group" aria-label="Filter kategori proyek">
+                    <button class="filter-btn filter-btn--active" data-filter="all"           aria-pressed="true">Semua</button>
+                    <button class="filter-btn"                    data-filter="data-science"  aria-pressed="false">Data Science</button>
+                    <button class="filter-btn"                    data-filter="oop"           aria-pressed="false">OOP / Java</button>
+                    <button class="filter-btn"                    data-filter="web"           aria-pressed="false">Web</button>
+                    <button class="filter-btn"                    data-filter="akademik"      aria-pressed="false">Akademik</button>
+                </div>
+
+                <!-- Grid Proyek -->
+                <div class="projects-grid" id="projects-grid" aria-label="Daftar proyek">
+
+                    <!-- Proyek 1 -->
+                    <article class="project-card" id="project-eda-ecommerce" data-category="data-science" aria-labelledby="proj1-title">
+                        <div class="project-card-thumbnail" aria-hidden="true">
+                            <div class="thumbnail-placeholder thumbnail-placeholder--blue">
+                                <span class="thumbnail-icon">📈</span>
+                            </div>
+                            <span class="project-badge project-badge--featured">Unggulan</span>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-meta">
+                                <span class="project-category-label" aria-label="Kategori">Data Science</span>
+                                <time class="project-date" datetime="2025-05">Mei 2025</time>
+                            </div>
+                            <h3 id="proj1-title" class="project-title">Analisis EDA Dataset E-Commerce Indonesia</h3>
+                            <p class="project-description">
+                                Melakukan Exploratory Data Analysis pada dataset transaksi e-commerce publik (100k+ baris)
+                                menggunakan pandas dan Seaborn untuk menemukan pola perilaku konsumen dan tren penjualan musiman.
+                            </p>
+                            <ul class="project-tech-stack" aria-label="Teknologi yang digunakan">
+                                <li class="tech-tag">Python</li>
+                                <li class="tech-tag">pandas</li>
+                                <li class="tech-tag">Seaborn</li>
+                                <li class="tech-tag">Jupyter</li>
+                            </ul>
+                            <footer class="project-card-footer">
+                                <a href="#" class="project-link project-link--github" aria-label="Lihat kode sumber di GitHub">
+                                    <span aria-hidden="true">⌥</span> GitHub
+                                </a>
+                                <a href="#" class="project-link project-link--demo" aria-label="Lihat demo notebook">
+                                    <span aria-hidden="true">▶</span> Demo Notebook
+                                </a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 2 -->
+                    <article class="project-card" id="project-oop-library" data-category="oop" aria-labelledby="proj2-title">
+                        <div class="project-card-thumbnail" aria-hidden="true">
+                            <div class="thumbnail-placeholder thumbnail-placeholder--orange">
+                                <span class="thumbnail-icon">📚</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-meta">
+                                <span class="project-category-label" aria-label="Kategori">OOP / Java</span>
+                                <time class="project-date" datetime="2025-03">Maret 2025</time>
+                            </div>
+                            <h3 id="proj2-title" class="project-title">Sistem Manajemen Perpustakaan (OOP Java)</h3>
+                            <p class="project-description">
+                                Membangun aplikasi CLI untuk manajemen perpustakaan kampus menggunakan Java dengan menerapkan
+                                prinsip enkapsulasi, inheritance, polimorfisme, dan design pattern MVC secara konsisten.
+                            </p>
+                            <ul class="project-tech-stack" aria-label="Teknologi yang digunakan">
+                                <li class="tech-tag">Java</li>
+                                <li class="tech-tag">OOP</li>
+                                <li class="tech-tag">MVC Pattern</li>
+                                <li class="tech-tag">IntelliJ</li>
+                            </ul>
+                            <footer class="project-card-footer">
+                                <a href="#" class="project-link project-link--github" aria-label="Lihat kode sumber di GitHub">
+                                    <span aria-hidden="true">⌥</span> GitHub
+                                </a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 3 -->
+                    <article class="project-card" id="project-ml-churn" data-category="data-science" aria-labelledby="proj3-title">
+                        <div class="project-card-thumbnail" aria-hidden="true">
+                            <div class="thumbnail-placeholder thumbnail-placeholder--purple">
+                                <span class="thumbnail-icon">🤖</span>
+                            </div>
+                            <span class="project-badge project-badge--new">Baru</span>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-meta">
+                                <span class="project-category-label" aria-label="Kategori">Data Science</span>
+                                <time class="project-date" datetime="2026-01">Januari 2026</time>
+                            </div>
+                            <h3 id="proj3-title" class="project-title">Prediksi Churn Pelanggan dengan Machine Learning</h3>
+                            <p class="project-description">
+                                Membangun model klasifikasi biner menggunakan Random Forest dan XGBoost untuk memprediksi
+                                kemungkinan pelanggan berhenti berlangganan. Akurasi model mencapai <strong>88.5%</strong> pada data uji.
+                            </p>
+                            <ul class="project-tech-stack" aria-label="Teknologi yang digunakan">
+                                <li class="tech-tag">Python</li>
+                                <li class="tech-tag">Scikit-learn</li>
+                                <li class="tech-tag">XGBoost</li>
+                                <li class="tech-tag">Google Colab</li>
+                            </ul>
+                            <footer class="project-card-footer">
+                                <a href="#" class="project-link project-link--github" aria-label="Lihat kode sumber di GitHub">
+                                    <span aria-hidden="true">⌥</span> GitHub
+                                </a>
+                                <a href="#" class="project-link project-link--demo" aria-label="Lihat laporan proyek">
+                                    <span aria-hidden="true">▶</span> Laporan
+                                </a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 4 -->
+                    <article class="project-card" id="project-oop-bank" data-category="oop" aria-labelledby="proj4-title">
+                        <div class="project-card-thumbnail" aria-hidden="true">
+                            <div class="thumbnail-placeholder thumbnail-placeholder--green">
+                                <span class="thumbnail-icon">🏦</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-meta">
+                                <span class="project-category-label" aria-label="Kategori">OOP / Java</span>
+                                <time class="project-date" datetime="2024-11">November 2024</time>
+                            </div>
+                            <h3 id="proj4-title" class="project-title">Simulasi Sistem Perbankan Berbasis OOP</h3>
+                            <p class="project-description">
+                                Mensimulasikan operasi dasar perbankan (transfer, cek saldo, deposito) menggunakan Java.
+                                Proyek ini mengimplementasikan abstract class, interface, dan exception handling secara menyeluruh.
+                            </p>
+                            <ul class="project-tech-stack" aria-label="Teknologi yang digunakan">
+                                <li class="tech-tag">Java</li>
+                                <li class="tech-tag">Abstract Class</li>
+                                <li class="tech-tag">Interface</li>
+                                <li class="tech-tag">Git</li>
+                            </ul>
+                            <footer class="project-card-footer">
+                                <a href="#" class="project-link project-link--github" aria-label="Lihat kode sumber di GitHub">
+                                    <span aria-hidden="true">⌥</span> GitHub
+                                </a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 5 -->
+                    <article class="project-card" id="project-sql-akademik" data-category="akademik" aria-labelledby="proj5-title">
+                        <div class="project-card-thumbnail" aria-hidden="true">
+                            <div class="thumbnail-placeholder thumbnail-placeholder--teal">
+                                <span class="thumbnail-icon">🗄️</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-meta">
+                                <span class="project-category-label" aria-label="Kategori">Akademik</span>
+                                <time class="project-date" datetime="2024-06">Juni 2024</time>
+                            </div>
+                            <h3 id="proj5-title" class="project-title">Perancangan Basis Data Sistem Akademik Kampus</h3>
+                            <p class="project-description">
+                                Tugas akhir mata kuliah Basis Data — merancang skema ERD dan mengimplementasikan database relasional
+                                untuk sistem akademik menggunakan PostgreSQL dengan stored procedures dan trigger.
+                            </p>
+                            <ul class="project-tech-stack" aria-label="Teknologi yang digunakan">
+                                <li class="tech-tag">PostgreSQL</li>
+                                <li class="tech-tag">ERD</li>
+                                <li class="tech-tag">SQL</li>
+                                <li class="tech-tag">pgAdmin</li>
+                            </ul>
+                            <footer class="project-card-footer">
+                                <a href="#" class="project-link project-link--github" aria-label="Lihat kode sumber di GitHub">
+                                    <span aria-hidden="true">⌥</span> GitHub
+                                </a>
+                                <a href="#" class="project-link project-link--demo" aria-label="Lihat dokumentasi proyek">
+                                    <span aria-hidden="true">▶</span> Dokumentasi
+                                </a>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <!-- Proyek 6 -->
+                    <article class="project-card" id="project-web-portofolio" data-category="web" aria-labelledby="proj6-title">
+                        <div class="project-card-thumbnail" aria-hidden="true">
+                            <div class="thumbnail-placeholder thumbnail-placeholder--pink">
+                                <span class="thumbnail-icon">🌐</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-meta">
+                                <span class="project-category-label" aria-label="Kategori">Web</span>
+                                <time class="project-date" datetime="2026-05">Mei 2026</time>
+                            </div>
+                            <h3 id="proj6-title" class="project-title">The Data Mind — Website Portofolio Ini</h3>
+                            <p class="project-description">
+                                Membangun website portofolio pribadi dari nol menggunakan HTML5 semantik, CSS modern (Grid &amp; Flexbox),
+                                dan JavaScript vanilla tanpa framework. Berfokus pada aksesibilitas, performa, dan desain responsif.
+                            </p>
+                            <ul class="project-tech-stack" aria-label="Teknologi yang digunakan">
+                                <li class="tech-tag">HTML5</li>
+                                <li class="tech-tag">CSS3</li>
+                                <li class="tech-tag">JavaScript</li>
+                                <li class="tech-tag">Figma</li>
+                            </ul>
+                            <footer class="project-card-footer">
+                                <a href="#" class="project-link project-link--github" aria-label="Lihat kode sumber di GitHub">
+                                    <span aria-hidden="true">⌥</span> GitHub
+                                </a>
+                                <a href="#" class="project-link project-link--demo" aria-label="Lihat live demo website">
+                                    <span aria-hidden="true">▶</span> Live Demo
+                                </a>
+                            </footer>
+                        </div>
+                    </article>
+
+                </div>
+                <!-- /projects-grid -->
+
+                <div class="projects-cta" aria-label="Tautan ke semua proyek">
+                    <a href="#" class="btn btn--outline" id="btn-all-projects">
+                        Lihat Semua Proyek di GitHub →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- -----------------------------------------------
+             SECTION 5: TESTIMONIALS — Rekomendasi (opsional)
+        ------------------------------------------------ -->
+        <section id="testimonials" class="section section--testimonials" aria-labelledby="testimonials-heading">
+            <div class="container">
+
+                <header class="section-header">
+                    <span class="section-label">Rekomendasi</span>
+                    <h2 id="testimonials-heading" class="section-title">Kata Mereka Tentang Saya</h2>
+                </header>
+
+                <div class="testimonials-grid" aria-label="Daftar rekomendasi">
+
+                    <blockquote class="testimonial-card" id="testimonial-dosen" cite="#" aria-labelledby="t1-author">
+                        <p class="testimonial-text">
+                            "Ahmad menunjukkan kemampuan analitik yang luar biasa dalam proyek tugas akhir semester.
+                            Pendekatannya terhadap pemodelan data sangat sistematis dan hasilnya melebihi ekspektasi."
+                        </p>
+                        <footer class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">
+                                <span class="avatar-initials">DR</span>
+                            </div>
+                            <div class="author-info">
+                                <cite id="t1-author" class="author-name">Dr. Rizky Firmansyah, M.Kom</cite>
+                                <span class="author-role">Dosen Mata Kuliah Basis Data &amp; Data Mining</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                    <blockquote class="testimonial-card" id="testimonial-kakak-tingkat" cite="#" aria-labelledby="t2-author">
+                        <p class="testimonial-text">
+                            "Sebagai rekan di laboratorium, Ahmad selalu proaktif membantu adik tingkat memahami konsep OOP yang sulit.
+                            Kemampuan komunikasi teknisnya sangat baik untuk mahasiswa semester 5."
+                        </p>
+                        <footer class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">
+                                <span class="avatar-initials">SN</span>
+                            </div>
+                            <div class="author-info">
+                                <cite id="t2-author" class="author-name">Siti Nuraini</cite>
+                                <span class="author-role">Asisten Lab Senior, Mahasiswa S1 Semester 7</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <!-- /main-content -->
+
+
+    <!-- =====================================================
+         FOOTER & KONTAK
+    ====================================================== -->
+    <footer id="site-footer" class="site-footer">
+
+        <section id="contact" class="footer-contact" aria-labelledby="contact-heading">
+            <div class="container">
+
+                <header class="section-header section-header--light">
+                    <span class="section-label">Kontak</span>
+                    <h2 id="contact-heading" class="section-title">Mari Berkolaborasi</h2>
+                    <p class="section-description">
+                        Terbuka untuk diskusi proyek, kesempatan magang, atau sekadar ngobrol tentang data dan teknologi.
+                    </p>
+                </header>
+
+                <div class="contact-grid">
+
+                    <address class="contact-info" aria-label="Informasi kontak">
+                        <ul class="contact-list" role="list">
+                            <li class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">✉️</span>
+                                <a href="mailto:ahmadfaiz@email.com" class="contact-link" id="link-email">
+                                    ahmadfaiz@email.com
+                                </a>
+                            </li>
+                            <li class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">💼</span>
+                                <a href="https://linkedin.com" class="contact-link" id="link-linkedin" target="_blank" rel="noopener noreferrer">
+                                    linkedin.com/in/ahmadfaizr
+                                </a>
+                            </li>
+                            <li class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">🐙</span>
+                                <a href="https://github.com" class="contact-link" id="link-github" target="_blank" rel="noopener noreferrer">
+                                    github.com/ahmadfaizr
+                                </a>
+                            </li>
+                            <li class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">📍</span>
+                                <span class="contact-text">Jakarta, Indonesia</span>
+                            </li>
+                        </ul>
+                    </address>
+
+                    <form id="contact-form" class="contact-form" action="#" method="POST" aria-labelledby="form-heading" novalidate>
+                        <h3 id="form-heading" class="form-title">Kirim Pesan Langsung</h3>
+
+                        <div class="form-group">
+                            <label for="input-name" class="form-label">Nama Lengkap <span aria-hidden="true">*</span></label>
+                            <input
+                                type="text"
+                                id="input-name"
+                                name="name"
+                                class="form-control"
+                                placeholder="Nama Anda"
+                                required
+                                autocomplete="name"
+                                aria-required="true"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-email" class="form-label">Email <span aria-hidden="true">*</span></label>
+                            <input
+                                type="email"
+                                id="input-email"
+                                name="email"
+                                class="form-control"
+                                placeholder="email@anda.com"
+                                required
+                                autocomplete="email"
+                                aria-required="true"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-subject" class="form-label">Subjek</label>
+                            <input
+                                type="text"
+                                id="input-subject"
+                                name="subject"
+                                class="form-control"
+                                placeholder="Kolaborasi proyek / Magang / Lainnya"
+                                autocomplete="off"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-message" class="form-label">Pesan <span aria-hidden="true">*</span></label>
+                            <textarea
+                                id="input-message"
+                                name="message"
+                                class="form-control form-control--textarea"
+                                rows="5"
+                                placeholder="Ceritakan tentang proyek atau kolaborasi yang Anda bayangkan..."
+                                required
+                                aria-required="true"
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full-width" id="btn-submit-contact">
+                            Kirim Pesan 🚀
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="footer-copyright">
+                    &copy; 2026 <strong>The Data Mind</strong> — Ahmad Faiz Ramadhani. Dibuat dengan penuh semangat belajar.
+                </p>
+                <nav class="footer-bottom-nav" aria-label="Navigasi footer">
+                    <a href="#hero"     class="footer-nav-link">Beranda</a>
+                    <a href="#about"    class="footer-nav-link">Tentang</a>
+                    <a href="#projects" class="footer-nav-link">Proyek</a>
+                    <a href="#contact"  class="footer-nav-link">Kontak</a>
+                </nav>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
